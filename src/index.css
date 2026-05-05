@@ -1,8 +1,11 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-brand-primary: #6d28d9;
-  --color-brand-primary-hover: #5b21b6;
+  /* Buttons: slightly darker violet */
+  --color-brand-primary: #5527c7;
+  --color-brand-primary-hover: #4620a8;
+  /* Deep dark violet for specified titles and labels */
+  --color-title-violet: #2a0d4a;
   --color-navy: #0f172a;
   --color-pending-bg: #fef9c3;
   --color-pending-text: #854d0e;
@@ -26,4 +29,13 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+/* Logo: gradient from button violet to title violet */
+.submithub-logo-mark {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-brand-primary) 0%,
+    var(--color-title-violet) 100%
+  );
 }

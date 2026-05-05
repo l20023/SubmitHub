@@ -36,6 +36,9 @@ function App() {
             onUpload={(assignment) =>
               setModal({ type: 'upload', assignment })
             }
+            onViewSubmission={(assignment) =>
+              setModal({ type: 'view', assignment })
+            }
           />
         )}
         {currentTab === 'past' && (

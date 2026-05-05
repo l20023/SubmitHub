@@ -8,9 +8,20 @@ export const currentUser: User = {
 
 export const activeAssignments: Assignment[] = [
   {
+    id: 'a0',
+    title: 'Transformer Attention Write-up',
+    dueDate: 'Due: 4/20/2026',
+    description:
+      'Short written analysis of self-attention; submit PDF only (max 3 pages).',
+    status: 'submitted',
+    submittedFiles: [
+      { name: 'attention_writeup_zt.pdf', size: '210 KB' },
+    ],
+  },
+  {
     id: 'a1',
     title: 'NLP Fundamentals — Tokenization',
-    dueDate: 'Due May 12, 2026 · 11:59 PM',
+    dueDate: 'Due: 5/12/2026',
     description:
       'Implement a simple tokenizer and document your design choices in a short report (PDF).',
     status: 'pending',
@@ -18,7 +29,7 @@ export const activeAssignments: Assignment[] = [
   {
     id: 'a2',
     title: 'Word Embeddings Lab',
-    dueDate: 'Due May 19, 2026 · 11:59 PM',
+    dueDate: 'Due: 5/19/2026',
     description:
       'Train or load embeddings and complete the notebook; submit code and a one-page summary.',
     status: 'pending',
@@ -26,7 +37,7 @@ export const activeAssignments: Assignment[] = [
   {
     id: 'a3',
     title: 'Sequence Classification',
-    dueDate: 'Due May 26, 2026 · 11:59 PM',
+    dueDate: 'Due: 5/26/2026',
     description:
       'Build a classifier on the provided dataset; include metrics and error analysis.',
     status: 'pending',
@@ -37,7 +48,7 @@ export const pastSubmissions: Assignment[] = [
   {
     id: 'p1',
     title: 'Course Syllabus Acknowledgment',
-    dueDate: 'Submitted Jan 15, 2026',
+    dueDate: 'Submitted: 1/15/2026',
     description: 'Signed PDF acknowledgment of course policies.',
     status: 'submitted',
     submittedFiles: [
@@ -47,7 +58,7 @@ export const pastSubmissions: Assignment[] = [
   {
     id: 'p2',
     title: 'Python & NumPy Refresher',
-    dueDate: 'Submitted Feb 2, 2026',
+    dueDate: 'Submitted: 2/2/2026',
     description: 'Starter exercises and environment check.',
     status: 'submitted',
     submittedFiles: [
@@ -58,7 +69,7 @@ export const pastSubmissions: Assignment[] = [
   {
     id: 'p3',
     title: 'Text Preprocessing Mini-Project',
-    dueDate: 'Submitted Mar 10, 2026',
+    dueDate: 'Submitted: 3/10/2026',
     description: 'Pipeline for cleaning and normalizing raw text.',
     status: 'submitted',
     submittedFiles: [
@@ -76,7 +87,7 @@ export const gradeRows: GradeRow[] = [
     score: 10,
     maxScore: 10,
     letterGrade: 'A',
-    submittedOn: 'Jan 15, 2026',
+    submittedOn: '1/15/2026',
   },
   {
     id: 'g2',
@@ -84,7 +95,7 @@ export const gradeRows: GradeRow[] = [
     score: 48,
     maxScore: 50,
     letterGrade: 'A-',
-    submittedOn: 'Feb 2, 2026',
+    submittedOn: '2/2/2026',
   },
   {
     id: 'g3',
@@ -92,7 +103,7 @@ export const gradeRows: GradeRow[] = [
     score: 92,
     maxScore: 100,
     letterGrade: 'A-',
-    submittedOn: 'Mar 10, 2026',
+    submittedOn: '3/10/2026',
   },
   {
     id: 'g4',
@@ -100,23 +111,26 @@ export const gradeRows: GradeRow[] = [
     score: 87,
     maxScore: 100,
     letterGrade: 'B+',
-    submittedOn: 'Apr 5, 2026',
+    submittedOn: '4/5/2026',
   },
 ]
 
 export const footerData = {
-  tas: [
-    { name: 'Alex Rivera', email: 'arivera@university.edu' },
-    { name: 'Jordan Lee', email: 'jlee.ta@university.edu' },
+  taEmails: [
+    'ta1@tsinghua.edu.cn',
+    'ta2@tsinghua.edu.cn',
+    'ta3@tsinghua.edu.cn',
   ],
   professor: {
-    name: 'Dr. Maria Chen',
-    email: 'mchen@university.edu',
-    office: 'CS Building 402 · Tue/Thu 2–4 PM',
+    email: 'prof.nlp@tsinghua.edu.cn',
+    officeHours: 'Mon-Fri, 2-4 PM',
   },
-  links: [
-    { label: 'Course syllabus', href: '#' },
-    { label: 'Discussion forum', href: '#' },
-    { label: 'Office hours calendar', href: '#' },
-  ],
+  discord: {
+    label: 'Join NLP 2026 Discord',
+    href: '#',
+  },
+  forum: {
+    display: 'forum.tsinghua.edu/nlp',
+    href: '#',
+  },
 }

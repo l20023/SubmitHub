@@ -20,18 +20,18 @@ export function Header({ user, currentTab, onTabChange }: HeaderProps) {
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 py-5 md:flex-row md:items-center md:justify-between">
         <div className="flex shrink-0 items-center gap-2">
           <div
-            className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-primary text-lg font-semibold text-white"
+            className="submithub-logo-mark flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-semibold text-white"
             aria-hidden
           >
             S
           </div>
-          <span className="text-xl font-semibold tracking-tight text-navy">
+          <span className="text-xl font-semibold tracking-tight text-title-violet">
             SubmitHub
           </span>
         </div>
 
         <nav
-          className="flex flex-1 flex-wrap items-center justify-center gap-1 md:gap-2"
+          className="flex flex-1 flex-wrap items-center justify-center gap-1 md:gap-6"
           aria-label="Main"
         >
           {tabs.map((tab) => (
@@ -39,10 +39,10 @@ export function Header({ user, currentTab, onTabChange }: HeaderProps) {
               key={tab.id}
               type="button"
               onClick={() => onTabChange(tab.id)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`px-2 py-1 text-sm font-medium transition-colors ${
                 currentTab === tab.id
-                  ? 'bg-slate-100 text-navy'
-                  : 'text-slate-600 hover:bg-slate-50 hover:text-navy'
+                  ? 'text-brand-primary'
+                  : 'text-slate-600 hover:text-slate-800'
               }`}
             >
               {tab.label}
@@ -52,7 +52,7 @@ export function Header({ user, currentTab, onTabChange }: HeaderProps) {
 
         <div className="flex shrink-0 items-center justify-end gap-3">
           <div
-            className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-slate-200 bg-slate-50 text-sm font-semibold text-navy"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-200 text-sm font-semibold text-title-violet"
             title={`${user.firstName} ${user.lastName}`}
             aria-label={`Signed in as ${user.firstName} ${user.lastName}`}
           >
