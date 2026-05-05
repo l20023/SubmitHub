@@ -15,7 +15,8 @@ export const activeAssignments: Assignment[] = [
       'Short written analysis of self-attention; submit PDF only (max 3 pages).',
     status: 'submitted',
     submittedFiles: [
-      { name: 'attention_writeup_zt.pdf', size: '210 KB' },
+      { name: 'attention_writeup_zt.pdf', size: '5.2 KB' },
+      { name: 'references_zt.pdf', size: '1.8 MB' },
     ],
   },
   {

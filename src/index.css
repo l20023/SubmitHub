@@ -1,11 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Buttons: slightly darker violet */
-  --color-brand-primary: #5527c7;
-  --color-brand-primary-hover: #4620a8;
-  /* Deep dark violet for specified titles and labels */
-  --color-title-violet: #2a0d4a;
+  /* 1 accent · 2 title (bluish, slightly lighter than french-blue) · 3 lavender · 4 snow */
+  --color-brand-primary: #4a42c5;
+  /* Clearly darker on hover so filled violet buttons read as interactive */
+  --color-brand-primary-hover: #30267a;
+  --color-title-violet: #302e7c;
+  --color-lavender: #e1e7fd;
+  --color-bright-snow: #f9fafb;
   --color-navy: #0f172a;
   --color-pending-bg: #fef9c3;
   --color-pending-text: #854d0e;
@@ -31,11 +33,26 @@ body {
   min-height: 100vh;
 }
 
-/* Logo: gradient from button violet to title violet */
+/* Pointer for interactive controls */
+button:not(:disabled),
+a[href]:not([href='']),
+label[for],
+summary {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Logo: L→R gradient (electric-sapphire → bright-indigo-2) */
 .submithub-logo-mark {
-  background: linear-gradient(
-    to bottom right,
-    var(--color-brand-primary) 0%,
-    var(--color-title-violet) 100%
-  );
+  background: linear-gradient(90deg, #6164e7 0%, #443bc4 100%);
+}
+
+.submithub-header-bar {
+  box-shadow:
+    0 4px 6px -1px rgb(15 23 42 / 0.08),
+    0 10px 24px -4px rgb(15 23 42 / 0.14),
+    0 2px 4px -2px rgb(15 23 42 / 0.06);
 }

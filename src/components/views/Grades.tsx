@@ -14,7 +14,7 @@ export function Grades({ grades }: GradesProps) {
         Summary of graded work. Final grades are posted by your instructor.
       </p>
 
-      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead className="border-b border-slate-200 bg-slate-50">
@@ -41,7 +41,7 @@ export function Grades({ grades }: GradesProps) {
                     {row.score} / {row.maxScore}
                   </td>
                   <td className="px-5 py-4">
-                    <span className="inline-flex rounded-full bg-submitted-bg px-2.5 py-0.5 text-xs font-semibold text-submitted-text">
+                    <span className="inline-flex items-center justify-center rounded-full bg-submitted-bg px-2.5 py-1 text-xs font-semibold leading-none text-submitted-text">
                       {row.letterGrade}
                     </span>
                   </td>

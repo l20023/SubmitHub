@@ -3,13 +3,9 @@ import { AssignmentCard } from '../AssignmentCard'
 
 type PastSubmissionsProps = {
   assignments: Assignment[]
-  onViewSubmission: (assignment: Assignment) => void
 }
 
-export function PastSubmissions({
-  assignments,
-  onViewSubmission,
-}: PastSubmissionsProps) {
+export function PastSubmissions({ assignments }: PastSubmissionsProps) {
   return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold tracking-tight text-navy md:text-4xl">
@@ -21,11 +17,7 @@ export function PastSubmissions({
       <ul className="space-y-5">
         {assignments.map((assignment) => (
           <li key={assignment.id}>
-            <AssignmentCard
-              assignment={assignment}
-              action="view"
-              onAction={() => onViewSubmission(assignment)}
-            />
+            <AssignmentCard assignment={assignment} action="view" />
           </li>
         ))}
       </ul>
